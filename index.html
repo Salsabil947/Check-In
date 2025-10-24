@@ -1,15 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Management Dashboard</title>
+    <link rel="stylesheet" href="./src/index.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Feather Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="flex h-screen bg-[#e8f5f6]">
+        <!-- Sidebar - Desktop -->
+        <aside id="sidebar" class="hidden md:flex md:flex-col md:w-64 bg-[#30382F] border-r border-[#30382F]">
+            <div class="p-6 border-b border-white/10">
+                <h1 class="text-[#6EC6CB]">Hotel Management</h1>
+            </div>
+            <nav class="flex-1 overflow-y-auto p-4">
+                <ul class="space-y-1" id="nav-menu">
+                    <!-- Navigation items will be inserted here -->
+                </ul>
+            </nav>
+        </aside>
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Hotel Management Dashboard</title>
-    </head>
+        <!-- Sidebar - Mobile -->
+        <div id="mobile-sidebar" class="fixed inset-0 z-50 md:hidden hidden">
+            <div class="absolute inset-0 bg-black/50" onclick="toggleMobileSidebar()"></div>
+            <aside class="absolute left-0 top-0 bottom-0 w-64 bg-[#30382F] border-r border-[#30382F]">
+                <div class="p-6 border-b border-white/10 flex justify-between items-center">
+                    <h1 class="text-[#6EC6CB]">Hotel Management</h1>
+                    <button onclick="toggleMobileSidebar()" class="text-white p-2">
+                        <i data-feather="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                <nav class="p-4">
+                    <ul class="space-y-1" id="mobile-nav-menu">
+                        <!-- Navigation items will be inserted here -->
+                    </ul>
+                </nav>
+            </aside>
+        </div>
 
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header class="bg-white border-b border-[#b8d4d6] px-6 py-4 shadow-sm">
+                <div class="flex items-center justify-between">
+                    <button onclick="toggleMobileSidebar()" class="md:hidden text-[#30382F] p-2">
+                        <i data-feather="menu" class="w-5 h-5"></i>
+                    </button>
+                    <div class="flex-1 md:flex-none"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="text-right hidden sm:block">
+                            <p class="text-[#30382F]">Admin User</p>
+                            <p class="text-[#5a6158]">admin@hotel.com</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-[#6EC6CB] flex items-center justify-center text-white shadow-md">
+                            A
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <main class="flex-1 overflow-y-auto p-6" id="main-content">
+                <!-- Content will be inserted here by JavaScript -->
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal Container -->
+    <div id="modal-container"></div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

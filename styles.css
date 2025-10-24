@@ -1,0 +1,320 @@
+/* Custom styles for Hotel Management Dashboard */
+
+/* Modal styles */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 0.625rem;
+    padding: 1.5rem;
+    max-width: 500px;
+    width: calc(100% - 2rem);
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    animation: scaleIn 0.2s;
+}
+
+.modal-header {
+    margin-bottom: 1rem;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #30382F;
+}
+
+.modal-close {
+    float: right;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #5a6158;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+}
+
+.modal-close:hover {
+    background-color: #f0f9fa;
+}
+
+/* Card styles */
+.card {
+    background: white;
+    border-radius: 0.625rem;
+    border: 1px solid #b8d4d6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #b8d4d6;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #30382F;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+/* Table styles */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    color: #30382F;
+    border-bottom: 1px solid #b8d4d6;
+    font-size: 0.875rem;
+}
+
+td {
+    padding: 0.75rem 1rem;
+    color: #30382F;
+    border-bottom: 1px solid #f0f9fa;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #f0f9fa;
+}
+
+/* Button styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #6EC6CB;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #50b8bd;
+}
+
+.btn-ghost {
+    background-color: transparent;
+    color: #30382F;
+}
+
+.btn-ghost:hover {
+    background-color: #f0f9fa;
+}
+
+.btn-icon {
+    padding: 0.5rem;
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+/* Input styles */
+.input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #b8d4d6;
+    border-radius: 0.625rem;
+    font-size: 1rem;
+    background-color: white;
+    color: #30382F;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #6EC6CB;
+    box-shadow: 0 0 0 3px rgba(110, 198, 203, 0.1);
+}
+
+.input::placeholder {
+    color: #5a6158;
+}
+
+/* Select styles */
+.select {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #b8d4d6;
+    border-radius: 0.625rem;
+    font-size: 1rem;
+    background-color: white;
+    color: #30382F;
+    cursor: pointer;
+}
+
+.select:focus {
+    outline: none;
+    border-color: #6EC6CB;
+    box-shadow: 0 0 0 3px rgba(110, 198, 203, 0.1);
+}
+
+/* Label styles */
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #30382F;
+    font-size: 0.875rem;
+}
+
+/* Badge styles */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.badge-green {
+    background-color: #d1f4dd;
+    color: #15803d;
+}
+
+.badge-blue {
+    background-color: #d1eced;
+    color: #50b8bd;
+}
+
+.badge-red {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.badge-yellow {
+    background-color: #fef3c7;
+    color: #ca8a04;
+}
+
+.badge-slate {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+/* Stats card styles */
+.stat-value {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #30382F;
+    margin-bottom: 0.5rem;
+}
+
+/* Chart container */
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Utility classes */
+.space-y-2 > * + * {
+    margin-top: 0.5rem;
+}
+
+.space-y-4 > * + * {
+    margin-top: 1rem;
+}
+
+.space-y-6 > * + * {
+    margin-top: 1.5rem;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-header {
+        padding: 1rem;
+    }
+
+    .card-content {
+        padding: 1rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+}
